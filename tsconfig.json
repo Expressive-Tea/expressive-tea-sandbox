@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "sourceMap": true,
+    "noEmit": true,
+    "noImplicitAny": true,
+    "target": "es6",
+    "lib": ["es6", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@server/*": ["server/*"],
+      "@app/*": ["app/*"]
+    }
+  },
+  "exclude": ["node_modules/**/*.ts"]
+}

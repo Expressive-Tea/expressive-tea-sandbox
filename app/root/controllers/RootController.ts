@@ -3,9 +3,9 @@ import {Request, Response} from 'express';
 
 @Route('/')
 export default class RootController {
-  @Get('/')
+  @Get('/test')
   async index(req: Request, res: Response): Promise<void> {
-    res.json({message: 'good!!'});
+    res.json({message: 'this is good!!'});
   }
 
 }

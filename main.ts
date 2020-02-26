@@ -9,7 +9,7 @@ import {ExpressiveTeaApplication} from '@zerooneit/expressive-tea/libs/interface
 })
 
 @Pour(new ExpressPlugin())
-@Static('./public', '/application')
+@Static('./public')
 class Bootstrap extends Boot {
   @RegisterModule(RootModule)
   async start(): Promise<ExpressiveTeaApplication> {

@@ -4,12 +4,13 @@ import ExpressPlugin from '@server/plugins/express';
 import RootModule from '@app/root/RootModule';
 import {ExpressiveTeaApplication} from '@zerooneit/expressive-tea/libs/interfaces';
 
+
+
+@Pour(ExpressPlugin)
+@Static('./public')
 @ServerSettings({
   port: 3000
 })
-
-@Pour(new ExpressPlugin())
-@Static('./public')
 class Bootstrap extends Boot {
   @RegisterModule(RootModule)
   async start(): Promise<ExpressiveTeaApplication> {

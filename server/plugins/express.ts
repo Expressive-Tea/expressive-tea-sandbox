@@ -16,6 +16,9 @@ export default class ExpressPlugin extends Plugin {
 
   @Stage(BOOT_STAGES.BOOT_DEPENDENCIES, true)
   async initialize(server: Express) {
+    server.set('view engine', 'pug');
+    server.set('views', 'views/');
+
     server.use(
       compress({
         filter: (req: Request, res: Response) =>

@@ -9,7 +9,9 @@ import {ExpressiveTeaApplication} from '@zerooneit/expressive-tea/libs/interface
 @Pour(ExpressPlugin)
 @Static('./public')
 @ServerSettings({
-  port: 3000
+  port: 8080,
+  privateKey: './certs/key.pem',
+  certificate: './certs/cert.pem'
 })
 class Bootstrap extends Boot {
   @RegisterModule(RootModule)
